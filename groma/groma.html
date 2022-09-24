@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Strumenti di misurazione: la groma</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Strumenti di misurazione: la groma">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fjalla+One' type='text/css' media='all' />
+		<link rel='stylesheet' href='http://demo.persaper.it/css/demo.css' type='text/css' media='all' />
+		
+		<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js'></script>
+		<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://demo.persaper.it/js/demo.js'></script>
+                <script type='text/javascript' src='script_curniculum.js'></script>
+                <script type='text/javascript' src='script_ferramentum.js'></script>
+                <script type='text/javascript' src='script_groma.js'></script>
+                <script type='text/javascript' src='script_perpendiculum.js'></script>
+                <script type='text/javascript' src='script_pondera.js'></script>
+				<script type='text/javascript' src='script_punta.js'></script>
+				<script type='text/javascript' src='script_rostro.js'></script>
+				<script type='text/javascript' src='script_terminale_alto.js'></script>				
+		
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="groma.glb" ios-src="groma.usdz" camera-controls camera-orbit="37.76deg 86.38deg auto" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 90deg auto" id="modelViewer" ar ar-modes="webxr">
+      <button class="Hotspotaudio" slot="hotspot-1" data-position="0.1161828879571631m 0.22229297970101913m -0.82303382004452976m" data-normal="-0.02324879668718804m 7.669987628353441e-8m 0.9997297101980075m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotationaudio">Descrizione e modalità di misurazione<br><audio controls style="height:35px; width:120px;">
+  <source src="Groma.mp3"</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="0.018055879244868372m 1.1364922425313224m 0.013220069070223165m" data-normal="0.8145759099455131m 0.0006555122992696983m 0.5800565983074971m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_1">Il ferramentum</div></div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.010361324243112396m 0.3466572042528189m 0.02093547819475464m" data-normal="0.44261203042748654m -0.05096379841454404m 0.8952638056863572m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_2">La punta</div></div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="0.010779763283875476m 1.8931438614205462m 0.01299833535137698m" data-normal="0.6051256575567628m 0.012742232983122147m 0.7960279982922079m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_3">Il terminale</div></div>
+         </button><button class="Hotspot" slot="hotspot-5" data-position="0.12320083574981229m 2.0933766989174845m 0.005090509980941652m" data-normal="-1.7247076635658648e-7m -0.000015484038693366334m 0.9999999998801075m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_4">Il rostro</div></div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="0.08721128863652544m 2.176329160641811m 0.1792161815168046m" data-normal="0.691181716062331m -0.00010958554389304832m 0.7226809969634873m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_5">La groma</div></div>
+      </button><button class="Hotspot" slot="hotspot-7" data-position="0.5526663178298745m 2.1744284228580675m -0.31347652930991665m" data-normal="0.009708711439059433m -0.9998992514901883m -0.010355085299223863m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_6">I cornicula</div></div>
+      </button><button class="Hotspot" slot="hotspot-8" data-position="-0.06510191371250995m 0.5021194662760635m 0.3200523348724499m" data-normal="0.8725895399364548m -0.1698274460529295m 0.45798049451982736m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_7">I perpendicula</div></div>
+      </button><button class="Hotspot" slot="hotspot-9" data-position="-0.05361135937768263m 0.47340199540863703m -0.3130099676291239m" data-normal="0.8825535935259511m 0.46683107509429156m 0.05628411748209859m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation"><div class="popup-me_8">I pondera</div></div>
+      </button>
+
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Mostra nello spazio
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+       <div class="mwc-switch-wrapper">
+      <mwc-switch id="toggleHotspots"><span>Mostra gli hotspot</span></mwc-switch>
+    </div>
+<!--     <paper-toggle-button id="toggleHotspots">Show annotations</paper-toggle-button> --> 
+      <div class="mwc-switch-wrapper-1">
+      <mwc-switch id="toggleHotspotsaudio"><span>Audiodescrizione</span></mwc-switch>
+    </div>
+<!--     <paper-toggle-button id="toggleHotspotsaudio">Show annotations</paper-toggle-button> --> 
+    </model-viewer> 
+    <script src="script.js"></script>
+    <script type="module">
+    
+    toggleHotspots.addEventListener('change', () => {
+      modelViewer.classList.toggle('show-hotspots', toggleHotspots.checked);
+    });
+    toggleHotspotsaudio.addEventListener('change', () => {
+      modelViewer.classList.toggle('show-hotspotsaudio', toggleHotspotsaudio.checked);
+    });
+
+  </script>
+
+<script>
+(() => {
+  const modelViewer = document.querySelector('#modelViewer');
+  const tapDistance = 2;
+  let panning = false;
+  let panX, panY;
+  let startX, startY;
+  let lastX, lastY;
+  let metersPerPixel;
+
+  const startPan = () => {
+    const orbit = modelViewer.getCameraOrbit();
+    const {theta, phi, radius} = orbit;
+    const psi = theta - modelViewer.turntableRotation;
+    metersPerPixel = 0.75 * radius / modelViewer.getBoundingClientRect().height;
+    panX = [-Math.cos(psi), 0, Math.sin(psi)];
+    panY = [
+      -Math.cos(phi) * Math.sin(psi),
+      Math.sin(phi),
+      -Math.cos(phi) * Math.cos(psi)
+    ];
+    modelViewer.interactionPrompt = 'none';
+  };
+
+  const movePan = (thisX, thisY) => {
+    const dx = (thisX - lastX) * metersPerPixel;
+    const dy = (thisY - lastY) * metersPerPixel;
+    lastX = thisX;
+    lastY = thisY;
+
+    const target = modelViewer.getCameraTarget();
+    target.x += dx * panX[0] + dy * panY[0];
+    target.y += dx * panX[1] + dy * panY[1];
+    target.z += dx * panX[2] + dy * panY[2];
+    modelViewer.cameraTarget = `${target.x}m ${target.y}m ${target.z}m`;
+
+    // This pauses turntable rotation
+    modelViewer.dispatchEvent(new CustomEvent(
+          'camera-change', {detail: {source: 'user-interaction'}}));
+  };
+
+  const recenter = (pointer) => {
+    panning = false;
+    if (Math.abs(pointer.clientX - startX) > tapDistance ||
+        Math.abs(pointer.clientY - startY) > tapDistance)
+      return;
+    const rect = modelViewer.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const hit = modelViewer.positionAndNormalFromPoint(x, y);
+    modelViewer.cameraTarget =
+        hit == null ? 'auto auto auto' : hit.position.toString();
+  };
+
+  const onPointerUp = (event) => {
+    const pointer = event.clientX ? event : event.changedTouches[0];
+    if (Math.abs(pointer.clientX - startX) < tapDistance &&
+        Math.abs(pointer.clientY - startY) < tapDistance) {
+      recenter(pointer);
+    }
+    panning = false;
+  };
+
+  modelViewer.addEventListener('mousedown', (event) => {
+    startX = event.clientX;
+    startY = event.clientY;
+    panning = event.button === 2 || event.ctrlKey || event.metaKey ||
+        event.shiftKey;
+    if (!panning)
+      return;
+
+    lastX = startX;
+    lastY = startY;
+    startPan();
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    panning = event.touches.length === 2;
+    if (!panning)
+      return;
+
+    const {touches} = event;
+    lastX = 0.5 * (touches[0].clientX + touches[1].clientX);
+    lastY = 0.5 * (touches[0].clientY + touches[1].clientY);
+    startPan();
+  }, true);
+
+  modelViewer.addEventListener('mousemove', (event) => {
+    if (!panning)
+      return;
+
+    movePan(event.clientX, event.clientY);
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchmove', (event) => {
+    if (!panning || event.touches.length !== 2)
+      return;
+
+    const {touches} = event;
+    const thisX = 0.5 * (touches[0].clientX + touches[1].clientX);
+    const thisY = 0.5 * (touches[0].clientY + touches[1].clientY);
+    movePan(thisX, thisY);
+  }, true);
+
+  self.addEventListener('mouseup', (event) => {
+    recenter(event);
+  }, true);
+  
+  self.addEventListener('touchend', (event) => {
+    if (event.touches.length === 0) {
+      recenter(event.changedTouches[0]);
+    }
+  }, true);
+})();
+</script>
+
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!--   <script type="module" src="https://unpkg.com/@polymer/paper-toggle-button@3.0.1/paper-toggle-button.js?module"></script> -->
+  <script type="module" src="https://unpkg.com/@material/mwc-switch@0.14.1/mwc-switch.js?module"></script>
+  </body>
+</html>
